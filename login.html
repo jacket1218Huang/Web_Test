@@ -1,0 +1,83 @@
+<!doctype html>
+<meta http-equiv=content-type content="text/html;charset=windows-1252">
+<link href=/css/styles.css rel=stylesheet media=screen>
+<title>
+  Login
+</title>
+<body onload=focusPW();>
+  <form name=login id=lgn action=login.cgi>
+    <br>
+    <b>
+      The system is logged out.
+    </b>
+    <br>
+    To enter the web configuration, please type password in the following
+    field.
+    <br>
+    <br>
+    <table border=0>
+      <tbody>
+        <tr>
+          <td class=gr>
+            Login password:
+            <td>
+              <input maxlength=12 size=30 id=webpwd_i name=webpwd type=password>
+              <td align=center>
+                <input name=Submit1 value=Submit type=submit>
+    </table>
+  </form>
+  <p>
+    <p>
+      <span style=color:red;display:none id=ej>
+        <br>
+        <b>
+          Error: The web configuration requires JavaScript enabled in your browser
+          (Chrome, Firefox, IE...).
+          <br>
+          Please enable the JavaScript first.
+        </b>
+        <br>
+        For more information about enabling JavaScript, please refer to the user
+        manual of the brower or contact your network administrator.
+        <br>
+        <br>
+        <table border=0>
+          <tbody>
+            <tr>
+              <td>
+                Google Chrome:
+                <td>
+                  Menu / Settings / Show advanced settings / Privacy / Content settings
+                  / Javascript / Allow all sites to run JavaScript (recommended).
+                  <tr>
+                    <tr>
+                      <td>
+                        Microsoft IE:
+                        <td>
+                          Menu / Tools / Internet Options / Security / Internet / Custom level...
+                          / Scripting / Enable.
+                          <tr>
+                            <tr>
+                              <td>
+                                Firefox:
+                                <td>
+                                  about:config / I'll be careful, I promise! / Preference Name / javascript.enabled
+                                  / True.
+        </table>
+      </span>
+      <br>
+      <br>
+      <p>
+        <span style=color:red>
+          When using IE, please disable its cache as follows.
+          <br>
+          Menu items: Tools / Internet Options... / General / Temporary Internet
+          Files / Settings... / Every visit to the page
+        </span>
+<script>
+  function focusPW(myForm) {
+	document.getElementById("webpwd_i").focus();
+  }
+  document.getElementById("lgn").style.display = "";
+  document.getElementById("ej").style.display = "none";
+</script>
